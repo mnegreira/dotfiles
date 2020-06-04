@@ -19,9 +19,9 @@ brew bundle
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/Sites
 
-# Create sites subdirectories
-mkdir $HOME/Sites/
-mkdir $HOME/Sites/laravel
+# Create GIT directory
+mkdir $HOME/GIT
+
 
 # Clone Github repositories
 ./clone.sh
