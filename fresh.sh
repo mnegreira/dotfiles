@@ -15,18 +15,12 @@ brew tap homebrew/bundle
 brew bundle
 
 
-# Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/spark-installer laravel/valet
-
-# Install Laravel Valet
-$HOME/.composer/vendor/bin/valet install
-
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
 mkdir $HOME/Sites
 
 # Create sites subdirectories
-mkdir $HOME/Sites/blade-ui-kit
+mkdir $HOME/Sites/
 mkdir $HOME/Sites/laravel
 
 # Clone Github repositories
