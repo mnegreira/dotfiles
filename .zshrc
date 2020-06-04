@@ -19,7 +19,7 @@ export MNML_RPROMPT=('mnml_cwd 20')
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="minimal"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -28,7 +28,7 @@ ZSH_THEME="minimal"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -113,3 +113,38 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# So, for example, the following two commands
+
+# autoload -U colors && colors
+# export PS1="%F{214}%K{000}%m%F{015}%K{000}:%F{039}%K{000}%~%F{015}%K{000}\$ "
+# present the hostname in orange with black background, followed by a colon in white with black background, followed by the current working directory in bright blue with black background, followed by the dollar sign in white with black background.
+
+# Prompt information on the right-hand side. For example, adding a timestamp. See https://superuser.com/a/1251045/290299. Of course, this can be color-coded, for example with some light blue/purple-ish color, like this:
+#
+# According to the zshmisc (https://man7.org/linux/man-pages/man3/strftime.3.html) man page there are several % codes for date and time, eg:
+# %T     Current time of day, in 24-hour format.
+# %t %@  Current time of day, in 12-hour, am/pm format.
+# %*     Current time of day in 24-hour format, with seconds.
+# %w     The date in day-dd format.
+# %W     The date in mm/dd/yy format.
+# %D{strftime-format}
+
+autoload -U colors && colors
+
+# Color schema
+# for i in {1..256}; do print -P "%F{$i}Color : $i"; done;
+# %F{118} (1 to 256) ~ %K
+# $FG[018] (1 to 256)
+# $fg[magenta] (magenta, red, white, yellow, black, blue, cyan, green)
+
+
+# Right Hand side prompt Blue color fg, Time hh:mm:ss, Date mm/dd/yy
+RPROMPT="%F{111}%K{000}|%F{214}%K{000}[%D{%L:%M:%S %Z}] %F{111}%K{000}[%D{%Y.%m.%d}]|"
+
+#
+PS1="________________________________________________________________________________
+"
+PS1+="| %F{111}%K{000}%c %F{256}%K{000}@ %D{%a %b %d} - ( %F{241}%K{000}%n@%m %F{256}%K{000}) %F{241}%K{000}[ %F{214}%K{000}$(git_prompt_info) %F{241}%K{000}]
+"
+PS1+="| => "
