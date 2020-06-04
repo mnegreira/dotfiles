@@ -3,19 +3,14 @@
 echo "Cloning repositories..."
 
 SITES=$HOME/Sites
-BLADE=$SITES/blade-ui-kit
-LARAVEL=$SITES/laravel
-
+GIT=$HOME/GIT
+ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 # Personal
-git clone git@github.com:driesvints/checklists.git $SITES/checklists
-git clone git@github.com:driesvints/driesvints.com.git $SITES/driesvints.com
-git clone git@github.com:driesvints/eventy.io.git $SITES/eventy.io
-git clone git@github.com:driesvints/steunze.be.git $SITES/steunze.be
-git clone git@github.com:EventSaucePHP/LaravelEventSauce.git $SITES/LaravelEventSauce
-git clone git@github.com:fullstackbelgium/fullstackbelgium.be.git $SITES/fullstackbelgium.be
-git clone git@github.com:fullstackeurope/fullstackeurope.com.git $SITES/fullstackeurope.com
-git clone git@github.com:laravelio/laravel.io.git $SITES/laravel.io
-git clone git@github.com:laravelio/paste.laravel.io.git $SITES/paste.laravel.io
+
+# ZSH Plugins
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
 
 # Blade UI Kit
 git clone git@github.com:blade-ui-kit/blade-heroicons.git $BLADE/blade-heroicons
