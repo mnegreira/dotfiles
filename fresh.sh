@@ -14,6 +14,10 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
+# Oracle Cloud Infrastructure CLI install
+# Future TODO create brew formulae
+
+bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
 
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
