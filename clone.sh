@@ -4,7 +4,12 @@ echo "Cloning repositories..."
 
 SITES=$HOME/Sites
 GIT=$HOME/GIT
+
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+ZSH_STANDARD=$HOME/.oh-my-zsh/
+
 # Personal
 
 # ZSH Plugins
