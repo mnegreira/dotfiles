@@ -23,4 +23,3 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 # Sites
-git clone git@github.com:mnegreira/durnoasociados.com.git $SITES/durnoasociados.com
