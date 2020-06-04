@@ -11,6 +11,7 @@ brew 'awscli'     # Official Amazon AWS command-line interface
 brew 'bash'       # Latest Bash version, Bourne-Again SHell, a UNIX command interpreter
 brew 'bat'        # Clone of cat(1) with syntax highlighting and Git integration, "cat" on steroids
 brew 'coreutils'  # Those that come with macOS are outdated
+brew 'ffmpeg x264'
 brew 'ffmpeg'     # A complete, cross-platform solution to record, convert and stream audio and video. https://ffmpeg.org/
 brew 'gh'         # GitHub command-line tool
 brew 'git'        #
