@@ -18,10 +18,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "MacBook Dries"
-sudo scutil --set HostName "MacBook Dries"
-sudo scutil --set LocalHostName "MacBook Dries"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacBook Dries"
+sudo scutil --set ComputerName "MacBook Onyx Marcos"
+sudo scutil --set HostName "MMacBook Onyx Marcos"
+sudo scutil --set LocalHostName "MacBook Onyx Marcos"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacBook Onyx Marcos"
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
@@ -58,7 +58,7 @@ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
 # Save to disk (not to iCloud) by default
-# defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
@@ -98,7 +98,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 # Disable automatic capitalization as it’s annoying when typing code
-# defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
 # Disable smart dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
@@ -123,9 +123,9 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 ###############################################################################
 
 # Trackpad: enable tap to click for this user and for the login screen
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-# defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-# defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Trackpad: map bottom right corner to right-click
 # defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
@@ -159,8 +159,8 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
-defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"
+defaults write NSGlobalDomain AppleLanguages -array "en" "es"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
@@ -168,10 +168,11 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 # sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
+sudo systemsetup -settimezone "America/Los_Angeles" > /dev/null
+#sudo systemsetup -settimezone "America/New_York" > /dev/null
 
 # Stop iTunes from responding to the keyboard media keys
-#launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 ###############################################################################
 # Energy saving                                                               #
@@ -447,15 +448,18 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (
 # 11: Launchpad
 # 12: Notification Center
 # 13: Lock Screen
+
 # Top left screen corner → Mission Control
 # defaults write com.apple.dock wvous-tl-corner -int 2
 # defaults write com.apple.dock wvous-tl-modifier -int 0
+
 # Top right screen corner → Desktop
 defaults write com.apple.dock wvous-tr-corner -int 10
 defaults write com.apple.dock wvous-tr-modifier -int 0
+
 # Bottom left screen corner → Start screen saver
-# defaults write com.apple.dock wvous-bl-corner -int 5
-# defaults write com.apple.dock wvous-bl-modifier -int 0
+defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-modifier -int 0
 
 ###############################################################################
 # Safari & WebKit                                                             #
