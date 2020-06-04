@@ -35,6 +35,9 @@ brew 'node'         # JavaScript runtime built on Chrome's V8 JavaScript engine.
 # brew 'yarn'       # JavaScript package manager
 
 # Apps
+cask 'appcleaner'
+cask 'flux'
+
 # PASSWORD MANAGERS
 cask 'lastpass'
 cask 'keepassxc'
