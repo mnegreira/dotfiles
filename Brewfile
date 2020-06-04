@@ -119,3 +119,4 @@ cask 'font-source-serif-pro'
 # Mac App Store
 mas 'Giphy Capture', id: 668208984
 mas 'Spark', id: 1176895641
+mas 'Twitter', id: 1482454543
