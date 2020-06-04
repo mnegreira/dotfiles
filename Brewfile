@@ -24,6 +24,7 @@ brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20 Manage comp
 brew 'trash'      # Manage the Trash bin
 brew 'tree'       # List directories in a tree structure
 brew 'zlib'       # Needed for Memcached
+brew 'zsh'        # Latest zsh shell
 
 
 

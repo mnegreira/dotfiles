@@ -34,6 +34,10 @@ mkdir $HOME/GIT
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
+# Setup brew zsh installed as default
+chsh -s /usr/local/bin/zsh
+
+
 # Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
