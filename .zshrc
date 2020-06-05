@@ -11,15 +11,15 @@ export ZSH=$HOME/.oh-my-zsh
 autoload -Uz compinit && compinit
 
 # Minimal - Theme Settings
-export MNML_INSERT_CHAR="$"
-export MNML_PROMPT=(mnml_git mnml_keymap)
-export MNML_RPROMPT=('mnml_cwd 20')
+#export MNML_INSERT_CHAR="$"
+#export MNML_PROMPT=(mnml_git mnml_keymap)
+#export MNML_RPROMPT=('mnml_cwd 20')
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="agnoster_mn"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -72,7 +72,7 @@ CASE_SENSITIVE="true"
 HIST_STAMPS="mm.dd.yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$DOTFILES
+# ZSH_CUSTOM=$DOTFILES
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -140,11 +140,11 @@ autoload -U colors && colors
 
 
 # Right Hand side prompt Blue color fg, Time hh:mm:ss, Date mm/dd/yy
-RPROMPT="%F{111}%K{000}|%F{214}%K{000}[%D{%L:%M:%S %Z}] %F{111}%K{000}[%D{%Y.%m.%d}]|"
+# RPROMPT="%F{111}%K{000}|%F{214}%K{000}[%D{%L:%M:%S %Z}] %F{111}%K{000}[%D{%Y.%m.%d}]|"
 
 #
-PS1="________________________________________________________________________________
-"
-PS1+="| %F{111}%c %F{256}@ %D{%a %b %d} - ( %F{241}%n@%m %F{256}) %F{241}[ %F{214}$(git_prompt_info) %F{241}]
-"
-PS1+="| => "
+#PS1="________________________________________________________________________________
+#"
+#PS1+="| %F{111}%c %F{256}@ %D{%a %b %d} - ( %F{241}%n@%m %F{256}) %F{241}[ %F{214}$(git_prompt_info) %F{241}]
+#"
+#PS1+="| => "

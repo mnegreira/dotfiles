@@ -37,6 +37,8 @@ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 # Setup brew zsh installed as default
 chsh -s /usr/local/bin/zsh
 
+ln -s $HOME/.dotfiles/ohmyzsh/themes/agnoster_mn.zsh-theme $ZSH/themes/agnoster_mn.zsh-theme
+
 
 # Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
